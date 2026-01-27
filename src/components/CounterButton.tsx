@@ -5,7 +5,7 @@ import { theme } from '../constants/theme';
 interface CounterButtonProps {
   title: string;
   onPress: () => void;
-  variant?: 'primary' | 'secondary' | 'danger';
+  variant?: 'primary' | 'secondary' | 'danger' | 'increment' | 'decrement' | 'reset';
   disabled?: boolean;
 }
 
@@ -21,14 +21,20 @@ export const CounterButton: React.FC<CounterButtonProps> = ({
     disabled && styles.disabled,
   ];
 
+  const textColor = variant === 'secondary' ? theme.colors.dark : theme.colors.white;
+
   return (
     <TouchableOpacity
       style={buttonStyle}
       onPress={onPress}
       disabled={disabled}
-      activeOpacity={0.7}
+      activeOpacity={0.8}
     >
-      <Text style={[styles.buttonText, disabled && styles.disabledText]}>
+      <Text style={[
+        styles.buttonText,
+        { color: disabled ? theme.colors.white : textColor },
+        disabled && styles.disabledText
+      ]}>
         {title}
       </Text>
     </TouchableOpacity>
@@ -39,10 +45,18 @@ const styles = StyleSheet.create({
   button: {
     paddingHorizontal: theme.spacing.lg,
     paddingVertical: theme.spacing.md,
-    borderRadius: theme.borderRadius.md,
+    borderRadius: theme.borderRadius.lg,
     alignItems: 'center',
     justifyContent: 'center',
     minWidth: 100,
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
   },
   primary: {
     backgroundColor: theme.colors.primary,
@@ -53,15 +67,26 @@ const styles = StyleSheet.create({
   danger: {
     backgroundColor: theme.colors.danger,
   },
+  increment: {
+    backgroundColor: theme.colors.counterIncrement,
+  },
+  decrement: {
+    backgroundColor: theme.colors.counterDecrement,
+  },
+  reset: {
+    backgroundColor: theme.colors.counterReset,
+  },
   disabled: {
-    backgroundColor: '#CCCCCC',
+    backgroundColor: theme.colors.counterDisabled,
+    elevation: 0,
+    shadowOpacity: 0,
   },
   buttonText: {
-    color: theme.colors.white,
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: '600',
   },
   disabledText: {
-    color: '#999999',
+    color: '#ffffff',
+    opacity: 0.8,
   },
 });

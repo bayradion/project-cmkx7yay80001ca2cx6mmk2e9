@@ -1,13 +1,18 @@
 export const theme = {
   colors: {
-    primary: '#2196F3',
-    secondary: '#FFC107',
-    success: '#4CAF50',
-    danger: '#F44336',
-    dark: '#212121',
-    light: '#F5F5F5',
-    white: '#FFFFFF',
-    text: '#333333',
+    primary: '#6366f1', // Indigo
+    secondary: '#f59e0b', // Amber
+    success: '#10b981', // Emerald
+    danger: '#ef4444', // Red
+    dark: '#1f2937', // Gray-800
+    light: '#f9fafb', // Gray-50
+    white: '#ffffff',
+    text: '#374151', // Gray-700
+    // New counter button specific colors
+    counterIncrement: '#22c55e', // Green
+    counterDecrement: '#ef4444', // Red
+    counterReset: '#8b5cf6', // Purple
+    counterDisabled: '#9ca3af', // Gray-400
   },
   spacing: {
     xs: 4,
