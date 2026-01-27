@@ -19,19 +19,19 @@ export default function HomeScreen() {
           <CounterButton
             title="+"
             onPress={increment}
-            variant="primary"
+            variant="increment"
           />
           
           <CounterButton
             title="−"
             onPress={decrement}
-            variant="secondary"
+            variant="decrement"
           />
           
           <CounterButton
             title="Reset"
             onPress={reset}
-            variant="danger"
+            variant="reset"
           />
         </View>
       </View>

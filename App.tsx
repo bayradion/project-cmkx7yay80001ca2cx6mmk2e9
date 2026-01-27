@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
 import HomeScreen from './src/screens/HomeScreen';
+import { theme } from './src/constants/theme';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -18,7 +19,7 @@ export default function App() {
         initialRouteName="Home"
         screenOptions={{
           headerStyle: {
-            backgroundColor: '#2196F3',
+            backgroundColor: theme.colors.primary,
           },
           headerTintColor: '#fff',
           headerTitleStyle: {

@@ -1,7 +1,7 @@
 export const theme = {
   colors: {
-    primary: '#6366f1', // Indigo
-    secondary: '#f59e0b', // Amber
+    primary: '#22c55e', // Green-500
+    secondary: '#16a34a', // Green-600
     success: '#10b981', // Emerald
     danger: '#ef4444', // Red
     dark: '#1f2937', // Gray-800
@@ -9,9 +9,9 @@ export const theme = {
     white: '#ffffff',
     text: '#374151', // Gray-700
     // New counter button specific colors
-    counterIncrement: '#22c55e', // Green
-    counterDecrement: '#ef4444', // Red
-    counterReset: '#8b5cf6', // Purple
+    counterIncrement: '#22c55e', // Green-500
+    counterDecrement: '#dc2626', // Red-600
+    counterReset: '#15803d', // Green-700
     counterDisabled: '#9ca3af', // Gray-400
   },
   spacing: {
