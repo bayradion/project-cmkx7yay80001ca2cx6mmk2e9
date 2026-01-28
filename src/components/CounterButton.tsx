@@ -21,7 +21,6 @@ export const CounterButton: React.FC<CounterButtonProps> = ({
     disabled && styles.disabled,
   ];
 
-  // For counter buttons (increment, decrement, reset), use white text on black background
   const getTextColor = () => {
     if (disabled) return theme.colors.white;
     if (variant === 'increment' || variant === 'decrement' || variant === 'reset') {
@@ -75,13 +74,13 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.danger,
   },
   increment: {
-    backgroundColor: theme.colors.counterIncrement,
+    backgroundColor: '#000000',
   },
   decrement: {
-    backgroundColor: theme.colors.counterDecrement,
+    backgroundColor: '#000000',
   },
   reset: {
-    backgroundColor: theme.colors.counterReset,
+    backgroundColor: '#000000',
   },
   disabled: {
     backgroundColor: theme.colors.counterDisabled,
