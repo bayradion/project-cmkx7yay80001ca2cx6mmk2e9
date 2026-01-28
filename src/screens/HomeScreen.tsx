@@ -11,7 +11,7 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <View style={styles.counterContainer}>
-          <Text style={styles.counterLabel}>Hello, World</Text>
+          <Text style={styles.counterLabel}>Hello</Text>
           <Text style={styles.counterValue}>{count}</Text>
         </View>
 
