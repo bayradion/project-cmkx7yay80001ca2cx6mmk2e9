@@ -21,7 +21,14 @@ export const CounterButton: React.FC<CounterButtonProps> = ({
     disabled && styles.disabled,
   ];
 
-  const textColor = variant === 'secondary' ? theme.colors.dark : theme.colors.white;
+  // For counter buttons (increment, decrement, reset), use white text on black background
+  const getTextColor = () => {
+    if (disabled) return theme.colors.white;
+    if (variant === 'increment' || variant === 'decrement' || variant === 'reset') {
+      return theme.colors.white;
+    }
+    return variant === 'secondary' ? theme.colors.dark : theme.colors.white;
+  };
 
   return (
     <TouchableOpacity
@@ -32,7 +39,7 @@ export const CounterButton: React.FC<CounterButtonProps> = ({
     >
       <Text style={[
         styles.buttonText,
-        { color: disabled ? theme.colors.white : textColor },
+        { color: getTextColor() },
         disabled && styles.disabledText
       ]}>
         {title}
