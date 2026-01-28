@@ -8,6 +8,7 @@ export const theme = {
     light: '#f9fafb', // Gray-50
     white: '#ffffff',
     text: '#374151', // Gray-700
+    blue: '#3b82f6', // Blue-500
     // Counter button specific colors - all pure black
     counterIncrement: '#000000', // Pure black for plus button
     counterDecrement: '#000000', // Pure black for minus button

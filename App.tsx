@@ -21,7 +21,7 @@ export default function App() {
           headerStyle: {
             backgroundColor: theme.colors.primary,
           },
-          headerTintColor: '#fff',
+          headerTintColor: theme.colors.blue,
           headerTitleStyle: {
             fontWeight: 'bold',
           },
@@ -30,7 +30,7 @@ export default function App() {
         <Stack.Screen 
           name="Home" 
           component={HomeScreen}
-          options={{ title: 'Good one' }}
+          options={{ title: 'CODe' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
