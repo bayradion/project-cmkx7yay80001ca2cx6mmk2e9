@@ -8,10 +8,10 @@ export const theme = {
     light: '#f9fafb', // Gray-50
     white: '#ffffff',
     text: '#374151', // Gray-700
-    // Counter button specific colors - all black variants
-    counterIncrement: '#000000', // Black
-    counterDecrement: '#1a1a1a', // Very dark gray
-    counterReset: '#2d2d2d', // Dark gray
+    // Counter button specific colors - all pure black
+    counterIncrement: '#000000', // Pure black for plus button
+    counterDecrement: '#000000', // Pure black for minus button
+    counterReset: '#000000', // Pure black for reset button
     counterDisabled: '#9ca3af', // Gray-400
   },
   spacing: {
