@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   counterValue: {
     fontSize: 72,
     fontWeight: 'bold',
-    color: theme.colors.primary,
+    color: theme.colors.text,
     textAlign: 'center',
   },
   buttonsContainer: {
